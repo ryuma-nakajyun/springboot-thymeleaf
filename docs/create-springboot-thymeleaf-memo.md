@@ -1,8 +1,5 @@
 # SpringBoot最小構成プロジェクト
-- SpringBootとThymeleafで最小構成プロジェクトを作成する手順を示す.
-
-## プロジェクト構成
-Linux上で Spring Boot最小構成プロジェクトをコマンドだけで作る ならこんな感じです。
+Linux上で Spring Boot + Thymeleaf で最小構成プロジェクトを作成する. 
 
 ### プロジェクト作成
 ```bash
