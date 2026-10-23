@@ -1,10 +1,7 @@
 # SpringBoot最小構成プロジェクト
-## SpringBootとThymeleafで最小構成プロジェクトを作成する手順を示す.
+- SpringBootとThymeleafで最小構成プロジェクトを作成する手順を示す.
 
-## 項目
-- パターン1　※素直に動作できた.　
-
-## パターン1
+##　プロジェクト構成
 Linux上で Spring Boot最小構成プロジェクトをコマンドだけで作る ならこんな感じです。
 
 ### プロジェクト作成
@@ -17,7 +14,7 @@ cd springboot-thymeleaf
 touch pom.xml
 ```
 
-```text
+```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
@@ -74,7 +71,6 @@ public class DemoApplication {
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
     }
-
 }
 ```
 
@@ -95,19 +91,18 @@ public class HelloController {
     @GetMapping("/hello")  
     public String hello() {  
         return "Hello Spring Boot!";  
-    }  
-
+    }
 }
 ```
 
 ### 起動
 ```bash
-mvn spring-boot:run  
+mvn spring-boot:run
 ```
 ### 動作確認  
 別ターミナル
 ```bash
-curl http://localhost:8080/hello  
+curl http://localhost:8080/hello
 ```
 
 ### 結果  
@@ -156,19 +151,21 @@ $ tree
                 └── default-compile
                     ├── createdFiles.lst
                     └── inputFiles.lst
-```
 24 directories, 13 files
+```
 
-参考:AI先生  
+### 参考
+- AI先生
+- spring bootの関連書籍たち
 
-## memo
+### memo
+---
 - まだ、springboot-thymeleafの初期構成の説明としては不十分である
   - 全体的にディレクトリ構成が頭にはいっていない
   - mkdir ,touch の実行場所が定まっていなし、整理もできない状態である
 - ディレクトリにファイルがある程度配置しだい、httpからhttpsにする
-  - 手順元は[https-memo.md]とする.
+  - 手順元は**https-memo.md**とする.
 - Spring Boot + PostgreSQL接続 をやると、いいらしい.
   - PostgreSQLの環境構築は完了済み
   - 次の次くらいに取り組みたい(DBのテーブルデータは都道府県データを予定している)
 - 
-  - 
