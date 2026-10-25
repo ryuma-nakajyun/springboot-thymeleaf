@@ -18,7 +18,6 @@ touch pom.xml
          https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -28,18 +27,19 @@ touch pom.xml
     <groupId>com.example</groupId>
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
     <properties>
         <java.version>17</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+            <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+    </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -96,6 +96,7 @@ public class HelloController {
 ```bash
 mvn spring-boot:run
 ```
+実行後に、
 ### 動作確認  
 別ターミナル
 ```bash
@@ -151,7 +152,22 @@ $ tree
 24 directories, 13 files
 ```
 
+### 学び・気づき
+---
+- mvn spring-boot:run実行後に、targetディレクトリが作成されたことが確認できた。
+- keytoolコマンド実行後に keystore.p12が作成された
+- プロトコルHTTPSで画面が表示された
+
+### 疑問
+---
+- ブラウザ警告の警告理由
+  - TBA
+- curlコマンドのオプション -k　の意味
+  -  TBA
+- 
+
 ### 参考
+---
 - AI先生
 - spring bootの関連書籍たち
 
@@ -165,4 +181,4 @@ $ tree
 - Spring Boot + PostgreSQL接続 をやると、いいらしい.
   - PostgreSQLの環境構築は完了済み
   - 次の次くらいに取り組みたい(DBのテーブルデータは都道府県データを予定している)
-- 
+
